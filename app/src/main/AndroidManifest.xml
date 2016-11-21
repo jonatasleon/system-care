@@ -59,6 +59,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.systemcare.systemcare.AboutActivity" />
         </activity>
+
+        <service
+            android:name=".ReaderBeltService"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>
