@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_monitoring"
+            android:title="Monitorar" />
+            <!-- android:icon="@drawable/ic_menu_camera"-->
+
+        <item
+            android:id="@+id/nav_report"
+            android:title="Relatório" />
+        <!-- android:icon="@drawable/ic_menu_gallery" -->
+
+        <item
+            android:id="@+id/nav_about"
+            android:title="Sobre" />
+        <!-- android:icon="@drawable/ic_menu_slideshow" -->
+
+        <item
+            android:id="@+id/nav_signout"
+            android:title="Sign out" />
+        <!-- android:icon="@drawable/ic_menu_manage" -->
+    </group>
+
+    <!-- <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item> -->
+
+</menu>
