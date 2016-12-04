@@ -1,9 +1,14 @@
 package com.systemcare.systemcare;
 
+import android.app.Activity;
+import android.bluetooth.BluetoothAdapter;
 import android.content.Intent;
+import android.content.res.AssetManager;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,9 +18,26 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.systemcare.systemcare.api.ApiClient;
+import com.systemcare.systemcare.api.ApiInterface;
+import com.systemcare.systemcare.classes.Monitoramento;
+
+import app.akexorcist.bluetotohspp.library.BluetoothSPP;
+import app.akexorcist.bluetotohspp.library.BluetoothState;
+import app.akexorcist.bluetotohspp.library.DeviceList;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, BluetoothSPP.OnDataReceivedListener {
+
+    private BluetoothSPP btSpp = new BluetoothSPP(getBaseContext());
+    private TextView tvBpm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,11 +50,7 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-                
-                Intent i = new Intent(MainActivity.this, ReaderBeltService.class);
-                startService(i);
+                bluetoothSettings();
             }
         });
 
@@ -45,7 +63,10 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        tvBpm = (TextView) findViewById(R.id.tv_bpm);
+        tvBpm.setTypeface(digitalFont());
 
+        Log.d("OnCreate", "OnCreate");
     }
 
     @Override
@@ -71,13 +92,7 @@ public class MainActivity extends AppCompatActivity
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
+        return (id == R.id.action_settings) || super.onOptionsItemSelected(item);
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
@@ -101,5 +116,77 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void bluetoothSettings() {
+
+        btSpp.setupService();
+        btSpp.startService(BluetoothState.DEVICE_OTHER);
+
+        if(btSpp.isBluetoothEnabled()) {
+            connectDevices();
+        } else {
+            Intent enableBluetoothIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+            startActivityForResult(enableBluetoothIntent, BluetoothState.REQUEST_ENABLE_BT);
+            Toast.makeText(getBaseContext(), "O bluetooth deve estar habilitado", Toast.LENGTH_LONG)
+                    .show();
+        }
+    }
+
+    private void connectDevices() {
+        Log.d("BLUETEETH", "connectDevices");
+        try {
+            Intent i = new Intent(getApplicationContext(), DeviceList.class);
+            startActivityForResult(i, BluetoothState.REQUEST_CONNECT_DEVICE);
+        }catch (Exception e) {
+            Log.e("ERROR", e.getMessage());
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(requestCode == BluetoothState.REQUEST_CONNECT_DEVICE) {
+            if(resultCode == Activity.RESULT_OK) {
+                Log.d("BLUETOOTH", data.toString());
+                // btSpp.setupService();
+                // btSpp.startService(BluetoothState.DEVICE_OTHER);
+                try {
+                    btSpp.connect(data);
+                } catch (Exception e) {
+                    Log.e("ERROR", e.getMessage());
+                }
+                btSpp.setOnDataReceivedListener(MainActivity.this);
+            }
+        } else if(requestCode == BluetoothState.REQUEST_ENABLE_BT) {
+            if(resultCode == Activity.RESULT_OK) {
+                btSpp.setupService();
+                btSpp.startService(BluetoothState.DEVICE_OTHER);
+            }
+        }
+    }
+
+    private Typeface digitalFont() {
+        AssetManager am = getApplicationContext().getAssets();
+        return Typeface.createFromAsset(am, String.format("fonts/%s", "DS-DIGI.TTF"));
+    }
+
+    @Override
+    public void onDataReceived(byte[] data, String message) {
+        Log.d("BLUETOOTH", message);
+
+        ApiInterface api = ApiClient.getClient().create(ApiInterface.class);
+        Call<Monitoramento> monitoramentoCall = api.postMonitoramento(new Monitoramento(1, Integer.valueOf(message)));
+        monitoramentoCall.enqueue(new Callback<Monitoramento>() {
+            @Override
+            public void onResponse(Call<Monitoramento> call, Response<Monitoramento> response) {
+                tvBpm.setText(response.body().getValor() + " bpm");
+                findViewById(R.id.iv_logo).setVisibility(ImageView.GONE);
+            }
+
+            @Override
+            public void onFailure(Call<Monitoramento> call, Throwable t) {
+
+            }
+        });
     }
 }

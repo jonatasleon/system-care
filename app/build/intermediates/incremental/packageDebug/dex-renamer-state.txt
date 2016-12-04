@@ -1,0 +1,7 @@
+#Fri Dec 02 21:22:47 BRST 2016
+base.0=C\:\\Users\\aline\\Documents\\FATEC\\6SEM\\PROTOTIPO\\SystemCare\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_6508fb902949fb86f3f371777b90ffe80789e17c
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=C\:\\Users\\aline\\Documents\\FATEC\\6SEM\\PROTOTIPO\\SystemCare\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_250847fe10e80ffe09b089c6c451e79a0d52387a\\classes.dex
+base.1=C\:\\Users\\aline\\Documents\\FATEC\\6SEM\\PROTOTIPO\\SystemCare\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_250847fe10e80ffe09b089c6c451e79a0d52387a
+file.0=C\:\\Users\\aline\\Documents\\FATEC\\6SEM\\PROTOTIPO\\SystemCare\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_6508fb902949fb86f3f371777b90ffe80789e17c\\classes.dex

@@ -3,9 +3,10 @@ package com.systemcare.systemcare;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+
+import junit.framework.Test;
 
 public class AboutActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -37,7 +38,7 @@ public class AboutActivity extends AppCompatActivity implements View.OnClickList
 
        switch (v.getId()){
            case R.id.btn_ajuda:
-               i = new Intent(AboutActivity.this, HelpActivity.class);
+               i = new Intent(AboutActivity.this, TestActivity.class);
                break;
 
            case R.id.btn_contato:
@@ -52,11 +53,10 @@ public class AboutActivity extends AppCompatActivity implements View.OnClickList
                i = new Intent(AboutActivity.this, LicencaActivity.class);
                break;
 
-
-
            case R.id.btn_politica:
                i = new Intent(AboutActivity.this, PoliticaActivity.class);
                break;
+
            default:
                return;
        }

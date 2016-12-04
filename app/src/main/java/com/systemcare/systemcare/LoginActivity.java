@@ -30,8 +30,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.systemcare.systemcare.api.ApiClient;
+import com.systemcare.systemcare.api.ApiInterface;
+import com.systemcare.systemcare.classes.Usuario;
+
 import java.util.ArrayList;
 import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 import static android.Manifest.permission.READ_CONTACTS;
 
@@ -45,13 +53,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
      */
     private static final int REQUEST_READ_CONTACTS = 0;
 
-    /**
-     * A dummy authentication store containing known user names and passwords.
-     * TODO: remove after connecting to a real authentication system.
-     */
-    private static final String[] DUMMY_CREDENTIALS = new String[]{
-            "foo@example.com:hello", "bar@example.com:world"
-    };
     /**
      * Keep track of the login task to ensure we can cancel it if requested.
      */
@@ -75,11 +76,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
-                if (id == R.id.login || id == EditorInfo.IME_NULL) {
-                    attemptLogin();
-                    return true;
-                }
-                return false;
+               return (id == R.id.login || id == EditorInfo.IME_NULL);
             }
         });
 
@@ -87,9 +84,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                // attemptLogin();
-                Intent i = new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(i);
+                mAuthTask = new UserLoginTask(mEmailView.getText().toString(),
+                                                mPasswordView.getText().toString());
+                attemptLogin();
             }
         });
 
@@ -312,23 +309,23 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         @Override
         protected Boolean doInBackground(Void... params) {
             // TODO: attempt authentication against a network service.
-
-            try {
-                // Simulate network access.
-                Thread.sleep(2000);
-            } catch (InterruptedException e) {
-                return false;
-            }
-
-            for (String credential : DUMMY_CREDENTIALS) {
-                String[] pieces = credential.split(":");
-                if (pieces[0].equals(mEmail)) {
-                    // Account exists, return true if the password matches.
-                    return pieces[1].equals(mPassword);
-                }
-            }
+            Usuario usuario = new Usuario(mEmail, mPassword);
+            ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
+            Call<Usuario> usuarioCall = apiService.postPacientes(usuario);
 
             // TODO: register the new account here.
+            usuarioCall.enqueue(new Callback<Usuario>() {
+                @Override
+                public void onResponse(Call<Usuario> call, Response<Usuario> response) {
+                    Intent i = new Intent(LoginActivity.this, MainActivity.class);
+                    startActivity(i);
+                }
+
+                @Override
+                public void onFailure(Call<Usuario> call, Throwable t) {
+
+                }
+            });
             return true;
         }
 

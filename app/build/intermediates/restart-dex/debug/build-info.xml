@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="armeabi-v7a,armeabi"
+    api-level="21"
+    density="xhdpi"
+    format="8"
+    plugin-version="2.2.2"
+    timestamp="758472288967453"
+    token="-4892363727143765878"
+    verifier="FULL_BUILD_REQUESTED" >
+
+    <task
+        name="javac"
+        duration="926" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="495" />
+    <task
+        name="verifier"
+        duration="178" />
+
+    <artifact
+        location="C:\Users\aline\Documents\FATEC\6SEM\PROTOTIPO\SystemCare\app\build\outputs\apk\app-debug.apk"
+        type="MAIN" />
+
+    <build
+        timestamp="758472288967453"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="C:\Users\aline\Documents\FATEC\6SEM\PROTOTIPO\SystemCare\app\build\outputs\apk\app-debug.apk"
+            type="MAIN" />
+    </build>
+
+</instant-run>

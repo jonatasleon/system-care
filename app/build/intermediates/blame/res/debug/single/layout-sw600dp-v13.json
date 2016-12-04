@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/jonatasleon/Desktop/SystemCare/C:\\Users\\aline\\Documents\\FATEC\\6SEM\\PROTOTIPO\\SystemCare\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\design_layout_snackbar.xml",
+        "source": "/home/jonatasleon/Desktop/SystemCare/C:\\Users\\aline\\Documents\\FATEC\\6SEM\\PROTOTIPO\\SystemCare\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout-sw600dp-v13\\design_layout_snackbar.xml"
+    },
+    {
+        "merged": "/home/jonatasleon/Desktop/SystemCare/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
+        "source": "/home/jonatasleon/Desktop/SystemCare/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/layout-sw600dp-v13/design_layout_snackbar.xml"
+    }
+]

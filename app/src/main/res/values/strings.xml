@@ -1,116 +1,126 @@
 <resources>
-    <string name="app_name">SystemCare</string>
+    <string name="app_name">System Care</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password (optional)</string>
-    <string name="action_sign_in">Sign in or register</string>
+    <string name="prompt_password">Senha </string>
+    <string name="action_sign_in">Sign in</string>
     <string name="action_sign_in_short">Sign in</string>
-    <string name="error_invalid_email">This email address is invalid</string>
-    <string name="error_invalid_password">This password is too short</string>
-    <string name="error_incorrect_password">This password is incorrect</string>
-    <string name="error_field_required">This field is required</string>
+    <string name="error_invalid_email">Esse email é inválido</string>
+    <string name="error_invalid_password">A senha é muito curta</string>
+    <string name="error_incorrect_password">A senha está incorreta</string>
+    <string name="error_field_required">Este campo é obrigatório</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_main">System Care</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
     <string name="title_activity_termos">Termos de Uso</string>
-    <string name="large_text">
-        "Material is the metaphor.\n\n"
+    <string name="texttermos">
+Estes termos de uso apresentam as “Condições Gerais” aplicáveis ao uso dos serviços oferecidos \npela FABIANO ARAÚJO LOPES LTDA.,nome fantasia POCKET SOLUTIONS, inscrita no CNPJ sob número 11.222.333/0001-44, sediada na rua Coronel Tamarindo, 91, Edifício Plazza Center, CEP 12501-010, Centro, Guaratinguetá-SP, Brasil, referente ao sistema System Care, seja por meio do sistema web ou do aplicativo (app) System Care. O paciente ou médico atesta que concorda com todos os termos dispostos pela Pocket Solutions ao acessar e solicitar os serviços. Caso não esteja de acordo com os termos e condições de uso do sistema e com a política de privacidade do System Care ou não esteja disposto a se vincular a eles, não instale o aplicativo e/ou não utilize seus serviços. \n
 
-        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
-        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
-        "technologically advanced and open to imagination and magic.\n"
-        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
-        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
-        "flexibility of the material creates new affordances that supercede those in the physical "
-        "world, without breaking the rules of physics.\n"
-        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
-        "interact, and exist in space and in relation to each other. Realistic lighting shows "
-        "seams, divides space, and indicates moving parts.\n\n"
+\nTERMOS:
+\n(a) “Paciente”: usuário que for cadastrado por um médico para utilizar os serviços do aplicativo;
+\n(b) “Medico”: usuário que comprar o software System Care para utilizar os serviços;
+\n(c) “Serviços”: os serviços de monitoramentos de pacientes pelo médico aos pacientes;
+\n(d) “Usuário”: pacientes e médicos.\n
 
-        "Bold, graphic, intentional.\n\n"
+\nO QUE É O SYSTEM CARE?!
+\nO System Care é um sistema de monitoramento cardíaco, onde o paciente poderá ser monitorado diariamente. Caso ocorra alguma anomalia cardíaca, o paciente e seu médico serão alertados pelo System Care. O paciente poderá verificar o relatório de como está sua frequência cardíaca diretamente do seu smartphone e o médico poderá acompanhar, em tempo real, as informações cardíacas de seus pacientes.\n
 
-        "The foundational elements of print based design typography, grids, space, scale, color, "
-        "and use of imagery guide visual treatments. These elements do far more than please the "
-        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
-        "imagery, large scale typography, and intentional white space create a bold and graphic "
-        "interface that immerse the user in the experience.\n"
-        "An emphasis on user actions makes core functionality immediately apparent and provides "
-        "waypoints for the user.\n\n"
+\nCADASTRO E UTILIZAÇÃO DO SISTEMA
+\n(a) Ao cadastrar-se, o usuário concorda que forneceu informações verídicas, completas e atualizadas conforme solicitado no formulário preenchido inicialmente. Não sendo o System Care obrigado a fiscalizar ou controlar a veracidade das informações.
+\n(b) Somente as pessoas físicas que tenham plena capacidade legal estão autorizadas a participarem do sistema System Care. Pessoas impossibilitadas dessa capacidade, dentre estes os menores de idade, deverão estar assistidos por seus representantes legais.
+\n(c) O médico concorda que, ao se cadastrar, passará pela análise de aceitação da Pocket Solutions que poderá́ recusar ou cancelar sua conta de usuário a qualquer momento, sejam por denúncias ou política interna.
+\n(d) A Pocket Solutions reserva ainda o direito de utilizar todos os meios legais e possíveis para identificar seus usuários, bem como de solicitar, a qualquer momento, dados adicionais e documentos pertencentes aos mesmos, a fim de conferir os dados pessoais informados, sendo certo que a não colaboração poderá́ resultar no cancelamento da licença de uso do usuário.
+\n(e) A Pocket Solutions não se responsabiliza por qualquer dano que resulte da divulgação da senha a terceiros, cabendo unicamente ao usuário a responsabilidade pela divulgação da sua senha de acesso.
+\n(f) O cadastro no System Care é pessoal e intransferível, é vedada a transferência a terceiros.\n
 
-        "Motion provides meaning.\n\n"
+\nLIMITAÇÃO DE RESPONSABILIDADE
+\n(a) A Pocket Solutions não presta serviços médicos, servindo apenas como um intermediário a fim de melhorar o acompanhamento médico de seus pacientes. Assim, ao aceitar a prestação de serviços do médico, o paciente reconhece que a Pocket Solutions não possui vínculo direto com o médico, apenas facilita o acompanhamento entre médico e paciente. O usuário reconhece e concorda que a Pocket Solutions não poderá́ ser responsabilizado por qualquer problema decorrente dos serviços prestados por médicos, como atrasos, má́ qualidade, dentre outros incluindo o efetivo cumprimento das obrigações assumidas pelos usuários, não sendo as hipóteses acima consideradas como um rol taxativo. O usuário reconhece e aceita que, ao se cadastrar e aceitar a política do serviço, o faz por sua conta e risco exclusivos. A Pocket Solutions recomenda que o uso de seus serviços seja realizado com bom senso.
+\n(b) A Pocket Solutions não garante que o sistema estará disponível ininterruptamente, que estará́ sempre livre de erros, não podendo, por conseguinte, ser responsabilizado por danos causados aos usuários.
+\n(c) O usuário concorda também que a Pocket Solutions não responderá por quaisquer danos ou prejuízos causados a seu computador ou smartphone, como resultado do uso do System Care.
+\n(d) A Pocket Solutions não será, responsável por erros ou inconsistências no fornecimento de informações por outros sistemas independentes, especializados na prestação de serviços de GPS, radares, internet móvel e afins.\n
 
-        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
-        "inflection points that initiate motion, transforming the whole design.\n"
-        "All action takes place in a single environment. Objects are presented to the user without "
-        "breaking the continuity of experience even as they transform and reorganize.\n"
-        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
-        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+\nOBRIGAÇÕES, RESPONSABILIDADES E RISCOS DO PACIENTE
+\n(a) O paciente atesta que utiliza os serviços do System Care por sua livre e desimpedida escolha e reconhece e aceita como de sua inteira responsabilidade e risco em utilizar o System Care.
+\n(b) O paciente reconhece e declara que compreende e tem consciência de todos os riscos envolvidos na utilização do System Care e na contratação dos serviços, se comprometendo a tomar os cuidados razoavelmente esperados.\n
+\nDAS SANÇÕES
+\nA Pocket Solutions poderá́ notificar, suspender ou cancelar, temporariamente ou definitivamente, a conta de um usuário a qualquer tempo, e tomar as medidas legais cabíveis caso: viole quaisquer das declarações, garantias e obrigações que constam destes termos de uso ou de quaisquer políticas e regras adjacentes a ele; pratique atos fraudulentos ou dolosos; ou a Pocket Solutions entenda, a seu exclusivo critério, que as atividades tenham causado ou possam vir a causar algum dano a terceiros ou a própria  Pocket Solutions. O usuário não fará jus a qualquer indenização ou compensação pelo cancelamento ou suspensão de sua conta no sistema.\n
+\nDO PAGAMENTO
+\nOs pacientes são isentos de qualquer pagamento para adesão e utilização do aplicativo System Care.
+\nOs médicos deverão realizar uma assinatura mensal, ou anual, com pagamento mensal, para adesão de utilização do System Care. O valor referente a esse pagamento será́ disponibilizado no ato do cadastro. O valor poderá́ ser reajustado a qualquer momento, sendo o reajuste repassado a cada cliente no ato da renovação de assinatura.\n
 
-        "3D world.\n\n"
+\nCONDIÇÕES GERAIS
+\nEste termo de contrato não gera nenhum contrato de sociedade, de mandato, franquia ou relação de trabalho entre a Pocket Solutions e o usuário.
+\nEstes termos de uso podem ser modificados pela Pocket Solutions a qualquer momento. As modificações entrarão em vigor automaticamente na data de publicação da nova versão do System Care.
+\nEstes termos de uso serão regidos e interpretados de acordo com as leis da República Federativa do Brasil e quaisquer disputas oriundas do presente termo que não puderem ser amigavelmente solucionadas pelas partes, deverão ser submetidas ao Foro competente de Guaratinguetá.
+\nAo cadastrar-se como médico ou paciente no sistema e aceitar eletronicamente o presente termo, através do clique no botão “Aceito os termos e condições de uso”, o usuário declara automaticamente e incondicionalmente estar de acordo com este termo e todas as demais políticas e regras disponibilizadas no sistema.
+\nA equipe Pocket Solutions agradece a compreensão e cumprimento de todas as regras dispostas no presente termo. Essas essenciais para o perfeito funcionamento do sistema."\n
 
-        "The material environment is a 3D space, which means all objects have x, y, and z "
-        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
-        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
-        "position along the z-axis and has a standard 1dp thickness.\n"
-        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
-        "emulated by manipulating the y-axis.\n\n"
 
-        "Light and shadow.\n\n"
-
-        "Within the material environment, virtual lights illuminate the scene. Key lights create "
-        "directional shadows, while ambient light creates soft shadows from all angles.\n"
-        "Shadows in the material environment are cast by these two light sources. In Android "
-        "development, shadows occur when light sources are blocked by sheets of material at "
-        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
-        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
-
-        "Resting elevation.\n\n"
-
-        "All material objects, regardless of size, have a resting elevation, or default elevation "
-        "that does not change. If an object changes elevation, it should return to its resting "
-        "elevation as soon as possible.\n\n"
-
-        "Component elevations.\n\n"
-
-        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
-        "does not vary from 6dp in one app to 16dp in another app).\n"
-        "Components may have different resting elevations across platforms, depending on the depth "
-        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
-
-        "Responsive elevation and dynamic elevation offsets.\n\n"
-
-        "Some component types have responsive elevation, meaning they change elevation in response "
-        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
-        "changes are consistently implemented using dynamic elevation offsets.\n"
-        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
-        "to the component’s resting state. They ensure that elevation changes are consistent "
-        "across actions and component types. For example, all components that lift on press have "
-        "the same elevation change relative to their resting elevation.\n"
-        "Once the input event is completed or cancelled, the component will return to its resting "
-        "elevation.\n\n"
-
-        "Avoiding elevation interference.\n\n"
-
-        "Components with responsive elevations may encounter other components as they move between "
-        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
-        "through other material, components avoid interfering with one another any number of ways, "
-        "whether on a per component basis or using the entire app layout.\n"
-        "On a component level, components can move or be removed before they cause interference. "
-        "For example, a floating action button (FAB) can disappear or move off screen before a "
-        "user picks up a card, or it can move if a snackbar appears.\n"
-        "On the layout level, design your app layout to minimize opportunities for interference. "
-        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
-        "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="title_activity_politica">Politica de Privacidade</string>
+    <string name="textpolitica">
+    POLÍTICA DE PRIVACIDADE\n
+\n(a) A Pocket Solutions coletará, armazenará e poderá́ transmitir ou disponibilizar (caso necessário) a quaisquer terceiros os dados e informações fornecidos pelo paciente ao efetuar o cadastro no sistema, não se limitando à sua localização, nome completo, e-mail e, para o médico, além das anteriores, seu número de CRM, endereço de atendimento, dentre outros.
+\n(b) A Pocket Solutions implementa medidas de segurança apropriadas a fim de ajudar a evitar o acesso, alteração, divulgação ou destruição sem autorização dos dados armazenados.
+\n(c) A Pocket Solutions não se responsabilizará por quaisquer perdas de dados armazenados do usuário, inclusive decorrentes de caso fortuito, força maior, ocorridas em virtude de invasões ao System Care e quebra de segurança por parte de terceiros não autorizados.
+
+    </string>
     <string name="title_activity_licenca">Licença de Uso</string>
+    <string name="textlicenca">
+    LICENÇA DE USO\n
+\nA Pocket Solutions concede ao usuário uma licença limitada, pessoal, não exclusiva, não transferível, não comercial e plenamente revogável, para usar o System Care em seu smartphone ou computador tudo em conformidade com os termos contidos no presente contrato. A Pocket Solutions reserva-se de todos os direitos ao System Care não expressamente concedidos aqui.
+
+\nA Pocket Solutions não se responsabiliza por danos sofridos pelo usuário que tenha copiado, transferido, distribuído ou de qualquer outra forma utilizado conteúdo protegido presente System Care, violando direitos de terceiros.
+
+    </string>
     <string name="title_activity_contact">Contate-nos</string>
+    <string name="textcontato">
+        CONTATE-NOS!\n
+        \nE-mail:contato.systemcare@hotmail.com
+        Telefone: (12) 98125-7045
+        </string>
+
     <string name="title_activity_help">Ajuda</string>
+    <string name="textajuda">
+        UM TEXTO TOSCO DE COMO REALIZAR A CONEXÃO BLUETOOTH! :)
+    </string>
+
+    <string name="title_activity_test">Ajuda</string>
+    <string name="helptext">
+        NÃO CONSIGO CONECTAR AO BRACELETE. E AGORA?\n
+
+\nATIVAR OU DESATIVAR O BLUETOOTH\n
+\n1.	Abra o menu de Configurações do seu aparelho.
+\n2.	Clique em Bluetooth.
+\n3.	Toque no campo para ativar ou desativar a conexão.
+\n4.	Se aparecer o ícone de Bluetooth na área superior da tela, a conexão estará ativada.\n
+
+\nVISIBILIDADE\n
+
+\nSe o Android de seu aparelho for versão 5,0 ou superior, ele ficará visível para os dispositivos que estiverem próximos. Caso for uma versão inferior, terá que permitir a visibilidade.\n
+
+\nPAREAR O APARELHO COM UM DISPOSITIVO BLUETOOTH\n
+
+\n1.	Abra o menu de Configurações do seu aparelho.
+\n2.	 Clique em Bluetooth.
+\n3.	Verifique se o Bluetooth está ativado e visível.
+\n4.	O dispositivo irá fazer um escaneamento para encontrar os dispositivos Bluetooth que estão por perto.
+\n5.	Clique no nome do dispositivo que deseja parear.\n
+
+\nCONECTAR-SE A UM DISPOSITIVO BLUETOOTH\n
+
+\n1.	Abra o menu de Configurações do seu aparelho.
+\n2.	Clique em Bluetooth.
+\n3.	Verifique se o Bluetooth está habilitado
+\n4.	Toque em um dispositivo pareado.
+\n5.	Quando seu aparelho e o dispositivo Bluetooth estiverem conectados, o dispositivo aparecerá na lista como conectado.
+
+    </string>
 </resources>
